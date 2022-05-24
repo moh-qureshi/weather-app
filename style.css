@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;    
+    overflow: hidden;
+}
+
+.input-screen{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1000px;
+    margin: auto;
+    border: 3px solid black;
+    padding: 100px 100px;
+    margin-top: 200px;
+    background: rgba(105, 154, 167, 0.7);
+}
+
+#weather-input{
+    height: 50px;
+    width: 450px;
+    font-size: 30px;
+    border: none;
+    background-color: lightblue;
+    color: gray;
+}
+.nav-weather-input{
+    height: 50px;
+    width: 0px;
+    font-size: 30px;
+    margin-right: 165px;
+    opacity: 0;
+    border: none;
+    background-color: lightblue;
+    color: gray;
+}
+
+.nav-weather-input:focus{
+    width: 300px;
+    border: none;
+    outline: none;
+}
+
+button{
+    font-size: 30px;
+    height: 50px;
+    background-color: lightblue;
+    color: gray;
+    border: none;
+}
+
+.navbar{
+    display: flex;
+    font-size: 25px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.navbar li{
+    display: flex;
+    width: fit-content;
+    margin-left: 40px;
+}
+
+p{
+    margin-right: 50px;
+}
+
+.weather-display-screen{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 650px;
+    height: 500px;
+    margin: auto;
+    padding: 100px 100px;
+    margin-top: 50px;
+    
+
+}
+
+#weather-screen{
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 170px;
+    right: 50px;
+    color: white;
+    width: 620px;
+    height: 500px;
+    padding: 100px 100px;
+
+}
+
+i{
+    font-size: 120px;
+    margin: 20px 0 20px 0;
+}
+
+#temperature-text{
+    font-size: 100px;
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
+
+marquee{
+    background-color: white;
+    padding: 10px 0 10px 0;
+}
+
+span{
+    margin-left: 50px;
+    font-size: 20px;
+}
+

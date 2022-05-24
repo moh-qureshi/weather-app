@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/fd19a96ad8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="navbar" id="navbar">
+            <div class="nav-bar">
+            <ul>
+                <li id="navbar-time"></li>
+                <li id="navbar-city"></li>
+                <li id="navbar-country"></li>
+                <li id="navbar-region"></li>
+            </ul>
+            </div>
+            <input id="navbar-input" type="text" class="nav-weather-input">
+        </header>
+        <div>
+            <marquee id="weather-marquee" behavior="scroll" direction="left" scrollamount="5">
+                <span id="feels-like-temp"></span>
+                <span id="humidity"></span>
+                <span id="visibility"></span>
+                <span id="wind-speed"></span>
+                <span id="gust"></span>
+                <span id="wind-direction"></span>
+                <span id="uv"></span>
+                <span id="precipitation"></span>
+                <span id="pressure"></span>
+            </marquee>
+        </div>
+        <div id="input-screen" class="input-screen">
+            <div id="search-section">
+            <input id="weather-input" type="text" placeholder="Enter City, Town or Postcode...">
+            <button id="search-btn" onclick="getWeather(), navbarSearch()">Search</button>
+            </div>
+            <div id="weather-screen">
+                <h1 id="day-text"></h1>
+                <i id="sun-weather-icon" class="fa-solid fa-sun"></i>
+                <i id="moon-weather-icon" class="fa-solid fa-moon"></i>
+                <i id="cloudy-weather-icon" class="fa-solid fa-cloud"></i>
+                <i id="thunder-weather-icon" class="fa-solid fa-cloud-bolt"></i>
+                <i id="cloudy-night-weather-icon" class="fa-solid fa-cloud-moon"></i>
+                <i id="rain-weather-icon" class="fa-solid fa-cloud-rain"></i>
+                <i id="showers-weather-icon" class="fa-solid fa-cloud-showers-heavy"></i>
+                <i id="smog-weather-icon" class="fa-solid fa-smog"></i>
+                <i id="snowflake-weather-icon" class="fa-solid fa-snowflake"></i>
+                <h1 id="weather-text"></h1>
+                <h1 id="temperature-text"></h1>
+            </div>
+        </div>
+
+
+
+    </body>
+    <script src="main.js"></script>
+</html>
