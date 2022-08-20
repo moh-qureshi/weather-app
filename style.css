@@ -173,6 +173,8 @@ span{
 @media screen and (max-width: 375px) {
     .input-screen{
         width: 370px;
+        position: relative;
+        bottom: 175px;
     }
     #input-title{
         font-size: 26px;
