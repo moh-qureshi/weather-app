@@ -171,7 +171,9 @@ span{
 }
 
 @media screen and (max-width: 375px) {
-    
+    body{
+        height: 700px;
+    }   
     .input-screen{
         width: 320px;
         position: relative;
