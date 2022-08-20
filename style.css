@@ -7,34 +7,50 @@ body{
     background-image: url(/images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;    
+    height: 100vh;
     overflow: hidden;
+    font-family: Helvetica;
 }
 
 .input-screen{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1000px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
     margin: auto;
-    border: 3px solid black;
+    border: 3px solid white;
+    border-radius: 50px;
     padding: 100px 100px;
-    margin-top: 200px;
+    margin-top: 100px;
     background: rgba(105, 154, 167, 0.7);
+}
+
+#input-title{
+    font-size: 80px;
+    margin: 30px 0;
+    color: white;
 }
 
 #weather-input{
     height: 50px;
     width: 450px;
+    padding: 10px;
     font-size: 30px;
     border: none;
     background-color: lightblue;
     color: gray;
 }
+
+#weather-input:focus{
+    outline: none;
+}
 .nav-weather-input{
     height: 50px;
     width: 0px;
     font-size: 30px;
+    padding: 5px;
     margin-right: 165px;
     opacity: 0;
     border: none;
@@ -49,11 +65,23 @@ body{
 }
 
 button{
-    font-size: 30px;
-    height: 50px;
     background-color: lightblue;
     color: gray;
     border: none;
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.search-icon{
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+}
+
+#search-section{
+    display: flex;
 }
 
 .navbar{
@@ -132,3 +160,12 @@ span{
     font-size: 20px;
 }
 
+@media screen and (max-width: 820px) {
+    .nav-bar{
+        font-size: 18px;
+    }
+    #weather-screen{
+        bottom: 0px;
+        right: 0px;
+    }
+}

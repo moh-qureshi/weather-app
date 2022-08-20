@@ -1,5 +1,6 @@
 
 const apiKey = "33b8e34b33e34700a6d210223222205"
+const webTitle = document.getElementById("input-title")
 const navbar = document.getElementById("navbar")
 const time = document.getElementById("navbar-time")
 const city = document.getElementById("navbar-city")
@@ -58,10 +59,10 @@ function resetWeatherIcons(){
 }
 
 function navbarSearch(){
-
+    let buttonPosition = window.innerWidth / 2.4
     weatherMarquee.style.opacity= "1"
     searchButton.style.position = "relative" 
-    searchButton.style.transform = "translateY(-252px) translateX(560px)"
+    searchButton.style.transform = `translateY(-252px) translateX(${buttonPosition}px)`
     inputLocation.style.width = "0px"
     inputLocation.style.visibility = "hidden"
     inputScreen.classList.remove("input-screen")
@@ -120,7 +121,6 @@ function searchFromNavbar(){
         uv.innerText = "UV: " + data.current.uv
         windDirection.innerText = "Wind Direction: " + data.current.wind_dir
         populateWeatherScreen()
-        console.log(data)
         navbarInput.value = ""
         dayOrNight()
     })
@@ -128,6 +128,7 @@ function searchFromNavbar(){
 
 
 function getWeather(){
+    webTitle.style.display = "none"
     let location = inputLocation.value
 
     fetch('http://api.weatherapi.com/v1/current.json?key=33b8e34b33e34700a6d210223222205&q='+location+'&aqi=no'
@@ -158,7 +159,6 @@ function getWeather(){
         uv.innerText = "UV: " + data.current.uv
         windDirection.innerText = "Wind Direction: " + data.current.wind_dir
         populateWeatherScreen()
-        console.log(data)
         dayOrNight()
     })
 }
@@ -588,7 +588,11 @@ function nightWeather(){
             snowWeatherIcon.style.display = "initial"
             break;
         }
-    
+
+    searchButton.style.backgroundColor = "rgb(128, 128, 128, 0.4)"
+    searchButton.style.color = "white"
+    navbarInput.style.backgroundColor = "rgb(128, 128, 128, 0.4)"
+    navbarInput.style.color = "white"
     weatherScreen.style.background = "rgb(128, 128, 128, 0.4)"
     weatherMarquee.style.background = "rgb(128, 128, 128, 0.7)"
     weatherMarquee.style.color = "white"
