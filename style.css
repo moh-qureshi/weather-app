@@ -90,7 +90,6 @@ button{
     height: 60px;
     justify-content: space-between;
     align-items: center;
-    width: 100vh;
 }
 
 
@@ -208,6 +207,7 @@ span{
     }
     .nav-bar{
         font-size: 10px;
+        width: 100vh;
     }
     .nav-bar ul{
         margin-left: 5px;
