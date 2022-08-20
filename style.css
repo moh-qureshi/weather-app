@@ -170,7 +170,7 @@ span{
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
     
     .input-screen{
         width: 320px;
