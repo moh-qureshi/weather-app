@@ -170,14 +170,23 @@ span{
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
+    
     .input-screen{
-        width: 370px;
+        width: 320px;
         position: relative;
         bottom: 175px;
     }
     #input-title{
-        font-size: 26px;
+        font-size: 30px;
+        width: 184px;
+        position: relative;
+        right: 40px;
+    }
+
+    #search-section{
+        position: relative;
+        right: 50px;
     }
     #weather-input{
         font-size: 10px;
@@ -214,8 +223,7 @@ span{
         font-size: 90px;
     }
     #weather-text{
-        border: 1px solid red;
-        width: 200px;
+        width: fit-content;
     }
     #temperature-text{
         font-size: 40px;
